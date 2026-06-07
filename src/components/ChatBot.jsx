@@ -24,28 +24,72 @@ export default function ChatBot() {
     const q = question.toLowerCase();
 
     if (q.includes("yourself") || q.includes("about")) {
-      return `Mastan Vali is a Full Stack MERN Developer with experience building responsive web applications using React.js, Node.js, Express.js and MongoDB.`;
+     return `
+Hello! I'm P. Mastan Vali, a passionate Full Stack Developer from Kurnool, Andhra Pradesh.
+
+I completed my Bachelor of Technology in Computer Science and Engineering and have a strong interest in building modern, scalable, and user-friendly web applications.
+
+My technical expertise includes:
+• Frontend Development: React.js, JavaScript, HTML5, CSS3, Tailwind CSS, Redux Toolkit
+• Backend Development: Node.js, Express.js, REST APIs
+• Database Management: MongoDB, MySQL, Redis
+
+I have worked on projects such as:
+• Student Registration System
+• Spring Boot CRUD Application
+• Aspire Brand Store E-Commerce Website
+• Personal Portfolio Website
+
+I enjoy solving real-world problems through technology and continuously learning new tools and frameworks to improve my development skills.
+
+Apart from coding, I enjoy:
+🏏 Playing and watching cricket`;
     }
+
+ if (q.includes("date of birth")) {
+    return `
+Personal Information:
+
+👤 Name: P. Mastan Vali
+🎂 Date of Birth: 15 August 2002
+📍 Location: Kurnool, Andhra Pradesh, India
+
+Hello! I'm P. Mastan Vali, a passionate Full Stack Developer...
+`;}
 
     if (q.includes("skill")) {
-      return `Frontend:
-• React.js
-• Redux Toolkit
-• JavaScript
-• HTML5
-• CSS3
-• Tailwind CSS
+      return  `
+I have experience across the full web development stack.
 
-Backend:
-• Node.js
-• Express.js
-• REST APIs
+Frontend Development:
+• React.js for building dynamic and reusable user interfaces.
+• Redux Toolkit for efficient state management.
+• JavaScript (ES6+) for interactive web applications.
+• HTML5 and CSS3 for semantic, responsive, and accessible designs.
+• Tailwind CSS for rapid and modern UI development.
 
-Database:
-• MongoDB
-• MySQL
-• Redis`;
+Backend Development:
+• Node.js and Express.js for developing scalable server-side applications.
+• REST API development and integration for seamless client-server communication.
+
+Database Management:
+• MongoDB for NoSQL data storage and flexible schema design.
+• MySQL for relational database management and complex querying.
+• Redis for caching, session management, and application performance enhancement.
+
+I focus on developing responsive, scalable, and user-friendly web applications following modern development practices and clean code principles.
+`;
     }
+    if (q.includes ("hobbies")) {
+  return `
+Hobbies & Interests:
+
+🏏 Cricket
+• Playing and watching cricket
+• Teamwork and strategic thinking
+• Following international and domestic tournaments
+`;
+}
 
     if (q.includes("project")) {
       return `Projects:
