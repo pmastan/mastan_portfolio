@@ -28,7 +28,7 @@ const PROJECTS = [
     'Validation & Exception Handling'
   ],
 
-  github: 'YOUR_GITHUB_REPOSITORY_LINK',
+  github: 'https://github.com/pmastan/student-registration-system.git',
   live: null,
 },
  {
