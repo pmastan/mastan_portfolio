@@ -29,7 +29,7 @@ const PROJECTS = [
   ],
 
   github: 'https://github.com/pmastan/student-registration-system.git',
-  live: null,
+  live: "https://student-registration-system-pi.vercel.app/",
 },
  {
   num: '02',
@@ -70,8 +70,64 @@ const PROJECTS = [
     github: 'https://github.com/Sajid-sid/Aspire-Brand-Store-website',
     live: null,
   },
- 
- 
+ {
+  num: "04",
+  name: "Live Weather Application",
+  category: "Frontend",
+  featured: true,
+
+  desc: "Developed a responsive Live Weather Application using React.js that provides real-time weather updates for cities worldwide. Integrated a weather API to fetch current temperature, humidity, wind speed, weather conditions, and location-based forecasts. Implemented dynamic search functionality, error handling, and responsive UI design to deliver a seamless user experience across desktop and mobile devices.",
+
+  highlights: [
+    "Integrated OpenWeatherMap API for real-time weather data",
+    "Search weather conditions for any city worldwide",
+    "Displays temperature, humidity, wind speed, and weather status",
+    "Responsive design optimized for mobile, tablet, and desktop",
+    "Implemented loading states and error handling for API requests",
+    "Used React Hooks (useState, useEffect) for state management"
+  ],
+
+  tech: [
+    "React.js",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "REST API",
+    "OpenWeatherMap API",
+    "Axios"
+  ],
+
+  github: "https://github.com/pmastan/WeatherReport.git",
+  live: "https://weather-report-xi-eight.vercel.app/"
+},
+ {
+  num: "05",
+  name: "Calculator Application",
+  category: "Frontend",
+  featured: true,
+
+  desc: "Developed a responsive Calculator Application using React.js that performs basic arithmetic operations with a clean and intuitive user interface. Implemented dynamic state management to handle user inputs, calculations, and real-time result display while ensuring accurate mathematical operations.",
+
+  highlights: [
+    "Performed addition, subtraction, multiplication, and division operations",
+    "Implemented real-time calculation and display updates",
+    "Built reusable React components for calculator buttons and display",
+    "Managed application state using React Hooks",
+    "Responsive design compatible with desktop and mobile devices",
+    "Included clear and delete functionality for enhanced usability"
+  ],
+
+  tech: [
+    "React.js",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "React Hooks"
+  ],
+
+  github: "https://github.com/pmastan/appcalculator",
+  live: "https://appcalculator-one.vercel.app/"
+},
  
   
   
@@ -130,12 +186,67 @@ export default function Projects() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.32rem', marginBottom: '1.1rem' }}>
                   {p.tech.map(t => <span key={t} className="pill" style={{ fontSize: '0.67rem' }}>{t}</span>)}
                 </div>
-                <a href={p.github} target="_blank" rel="noreferrer"
-                  style={{ textAlign: 'center', padding: '0.5rem', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '0.73rem', color: 'var(--text2)', textDecoration: 'none', fontFamily: 'Syne, sans-serif', fontWeight: 600, transition: 'all 0.2s', marginTop: 'auto' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--rose)'; e.currentTarget.style.color = 'var(--rose)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text2)'; }}>
-                  View on GitHub →
-                </a>
+                {/* GitHub Button */}
+  <a
+    href={p.github}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      flex: 1,
+      textAlign: 'center',
+      padding: '0.5rem',
+      background: 'var(--bg3)',
+      border: '1px solid var(--border)',
+      borderRadius: '6px',
+      fontSize: '0.73rem',
+      color: 'var(--text2)',
+      textDecoration: 'none',
+      fontFamily: 'Syne, sans-serif',
+      fontWeight: 600,
+      transition: 'all 0.2s'
+    }}
+    onMouseEnter={e => {
+      e.currentTarget.style.borderColor = 'var(--rose)';
+      e.currentTarget.style.color = 'var(--rose)';
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.borderColor = 'var(--border)';
+      e.currentTarget.style.color = 'var(--text2)';
+    }}
+  >
+    GitHub →
+  </a>
+
+  {/* Live Demo Button */}
+  <a
+    href={p.live}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      flex: 1,
+      textAlign: 'center',
+      padding: '0.5rem',
+      background: 'var(--rose)',
+      border: '1px solid var(--rose)',
+      borderRadius: '6px',
+      fontSize: '0.73rem',
+      color: '#fff',
+      textDecoration: 'none',
+      fontFamily: 'Syne, sans-serif',
+      fontWeight: 600,
+      transition: 'all 0.2s'
+    }}
+    onMouseEnter={e => {
+      e.currentTarget.style.transform = 'translateY(-2px)';
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.transform = 'translateY(0)';
+    }}
+  >
+    Live Demo ↗
+  </a>
+
+                
               </div>
             ))}
           </div>
